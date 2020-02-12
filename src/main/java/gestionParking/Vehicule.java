@@ -2,9 +2,11 @@ package gestionParking;
 
 public class Vehicule {
 
+  
     private String immatriculation;
     private Boolean isStationne;
-
+    
+    
     public String getImmatriculation(){
         return this.immatriculation;
     }
@@ -21,4 +23,6 @@ public class Vehicule {
     this.immatriculation = immatriculation;
     this.isStationne = isStationne;
   }
+
+
 }

@@ -65,6 +65,10 @@ public final class App {
         {
             essai.setIsStationne(true);;
         }
+        else
+        {
+            System.out.println(essai.getImmatriculation() + " : Vous n'êtes pas autorisé à rentrer");
+        }
         /**
          * Nouvelle récupération des véhicules garées (true)
          */
@@ -76,22 +80,37 @@ public final class App {
         } 
         System.out.println();
 
+        /**
+         * ajout du véhicule essai2 sur le parking,
+         * s'il fait partie de la liste, le laisser entrer
+        */   
+        if( listVehicule.contains(essai2))
+        {
+            essai2.setIsStationne(true);;
+        }
+        else
+        {
+            System.out.println(essai2.getImmatriculation() + " : Vous n'êtes pas autorisé à rentrer");
+        }
      
-            
-       
         
+         salutation();   
+  
+        Parking parking = new Parking(30,"Valenciennes");
+        List<Vehicule> voituresAdmissible = parking.CreerListeVoitures();
+        System.out.println(voituresAdmissible.get(5).getImmatriculation());
+        Boolean essai1 = parking.AutoriserAcces(voituresAdmissible.get(2), voituresAdmissible);
+        System.out.println(essai1);
     }
-
+    
     /////////////// Fin de main
     /////////////// !!!!///////////////////////////////////////////////////
-    public static void listeVoitures(List listVehicule) {
+    public static void salutation() 
+    {
+        
+        System.out.println("salut lami");
 
-        for (int i = 0; i < listVehicule.size(); i++) {
-            System.out.println(listVehicule.get(i));
-
-            // listVehicule.get(i).getImmatriculation();
-
-        }
+         
     }
 
 }
