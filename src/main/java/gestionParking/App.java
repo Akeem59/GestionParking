@@ -1,6 +1,5 @@
 package gestionParking;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -18,14 +17,24 @@ public final class App {
         List<Vehicule> voituresAdmissible = parking.CreerListeVoitures();
         List<Vehicule> listeVoitures = parking.CreerListeVoituresComplètes();
 
-        Boolean essai1 = parking.AutoriserAcces(listeVoitures.get(2), voituresAdmissible);
-        Boolean essai2 = parking.AutoriserAcces(listeVoitures.get(3), voituresAdmissible);
-        Boolean essai5 = parking.AutoriserAcces(listeVoitures.get(5), voituresAdmissible);
-        Boolean essai3 = parking.AutoriserAcces(listeVoitures.get(6), voituresAdmissible);
-        Boolean essai8 = parking.AutoriserAcces(listeVoitures.get(8), voituresAdmissible);
-        Boolean essai4 = parking.AutoriserAcces(listeVoitures.get(9), voituresAdmissible);
-        Boolean essai7 = parking.AutoriserAcces(listeVoitures.get(10), voituresAdmissible);
-        parking.AfficherVoituresParking(voituresAdmissible);
+        // parking.afficherVehiculesAdmis();
+        System.out.println();
+        // parking.AutoriserAcces(listeVoitures.get(2), voituresAdmissible);
+        // parking.AutoriserAcces(listeVoitures.get(3), voituresAdmissible);
+        // parking.AutoriserAcces(listeVoitures.get(5), voituresAdmissible);
+        // parking.AutoriserAcces(listeVoitures.get(6), voituresAdmissible);
+        // parking.AutoriserAcces(listeVoitures.get(8), voituresAdmissible);
+        // parking.AutoriserAcces(listeVoitures.get(9), voituresAdmissible);
+        // parking.AutoriserAcces(listeVoitures.get(10), voituresAdmissible);
+        // parking.AfficherVoituresParking(voituresAdmissible);
+        Fixtures fixtures = new Fixtures();
+        List<Vehicule> maListe =  fixtures.voituresFixtures();
+        List<Vehicule> mesVehiculesAdmis =  fixtures.voituresAdmisesFixtures(maListe);
+
+        // parking.afficherListeVoituresComplète(maListe);
+        parking.afficherListeVoituresComplète(mesVehiculesAdmis);
+
+
     }
 
 }

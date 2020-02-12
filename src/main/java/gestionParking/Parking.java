@@ -39,13 +39,13 @@ class Parking {
     Vehicule v141 = new Vehicule("DD-128-SD", false);
     Vehicule v150 = new Vehicule("CE-377-ZD", false);
     Vehicule v151 = new Vehicule("CC-370-CD", false);
+    List<Vehicule> vehiculeAdmis = new ArrayList<Vehicule>();
 
     /**
      * je créer 1 liste de voitures : admises 
      * @return
      */
     public List CreerListeVoitures() {
-        List<Vehicule> vehiculeAdmis = new ArrayList<Vehicule>();
         vehiculeAdmis.add(v110);
         vehiculeAdmis.add(v111);
         vehiculeAdmis.add(v120);
@@ -103,15 +103,28 @@ class Parking {
     }
     public void AfficherVoituresParking(List<Vehicule> vehiculesAdmis) {
         List<Vehicule> voitureGaree = new ArrayList<Vehicule>();
+        int compteur = 0;
+
         System.out.println("****Vehicules actuellement garés****");
         for (int i = 0; i < vehiculesAdmis.size(); i++) {
             if(vehiculesAdmis.get(i).getIsStationne())
             {
+                compteur++;
                 voitureGaree.add(vehiculesAdmis.get(i));
-                System.out.println( i + " : " + vehiculesAdmis.get(i).getImmatriculation());
+                System.out.println( compteur + " : " + vehiculesAdmis.get(i).getImmatriculation());
             }
+        }  
+    }
+    public void afficherVehiculesAdmis() {
+        System.out.println("**** Liste des véhicules admis ****");
+        for (Vehicule vehicule : vehiculeAdmis) {
+            System.out.println(vehicule.getImmatriculation());
         }
-        
+    }
+    public void afficherListeVoituresComplète(List<Vehicule> voitures) {
+        for (int i = 0; i < voitures.size(); i++) {
+            System.out.println(voitures.get(i).getImmatriculation());
+        }
     }
 
 }

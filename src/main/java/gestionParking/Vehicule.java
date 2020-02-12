@@ -19,7 +19,6 @@ public class Vehicule {
     }
 
   public Vehicule(String immatriculation, Boolean isStationne){
-    System.out.println("Création d'une voiture !");          
     this.immatriculation = immatriculation;
     this.isStationne = isStationne;
   }
