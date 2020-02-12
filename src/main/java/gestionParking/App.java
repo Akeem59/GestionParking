@@ -1,14 +1,10 @@
-package akeem;
+package gestionParking;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import akeem.*;
 
-/**
- * Hello world!
- */
+
 public final class App {
     private App() {
     }
@@ -17,7 +13,6 @@ public final class App {
     static String vehiculeStationne[] = { "XX-777-ZZ" };
 
     /**
-     * Says hello to the world.
      * @param args The arguments of the program.
      */
     public static void main(final String[] args) {
