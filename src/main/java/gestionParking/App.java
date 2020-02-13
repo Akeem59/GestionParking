@@ -13,28 +13,13 @@ public final class App {
      */
     public static void main(final String[] args) {
 
-        Parking parking = new Parking(30,"Valenciennes");
-        List<Vehicule> voituresAdmissible = parking.CreerListeVoitures();
-        List<Vehicule> listeVoitures = parking.CreerListeVoituresComplètes();
+        Parking parking = new Parking(100,"Valenciennes");
 
-        // parking.afficherVehiculesAdmis();
-        System.out.println();
-        // parking.AutoriserAcces(listeVoitures.get(2), voituresAdmissible);
-        // parking.AutoriserAcces(listeVoitures.get(3), voituresAdmissible);
-        // parking.AutoriserAcces(listeVoitures.get(5), voituresAdmissible);
-        // parking.AutoriserAcces(listeVoitures.get(6), voituresAdmissible);
-        // parking.AutoriserAcces(listeVoitures.get(8), voituresAdmissible);
-        // parking.AutoriserAcces(listeVoitures.get(9), voituresAdmissible);
-        // parking.AutoriserAcces(listeVoitures.get(10), voituresAdmissible);
-        // parking.AfficherVoituresParking(voituresAdmissible);
         Fixtures fixtures = new Fixtures();
-        List<Vehicule> maListe =  fixtures.voituresFixtures();
-        List<Vehicule> mesVehiculesAdmis =  fixtures.voituresAdmisesFixtures(maListe);
-
-        // parking.afficherListeVoituresComplète(maListe);
-        parking.afficherListeVoituresComplète(mesVehiculesAdmis);
-
-
+        List<Vehicule> maListeVoiture =  fixtures.voituresFixtures();
+        List<Vehicule> mesVehiculesAdmis =  fixtures.voituresAdmisesFixtures(maListeVoiture);
+        fixtures.listeVoituresEntrantes(maListeVoiture, mesVehiculesAdmis);
+        parking.afficherListeVoituresGarees(maListeVoiture);
     }
 
 }
