@@ -1,4 +1,4 @@
-package gestionParking;
+package gestion.parking;
 
 public class Vehicule {
 

@@ -1,9 +1,9 @@
-package gestionParking;
+package gestion.parking;
 
 import java.util.ArrayList;
 import java.util.List;
 
-class Parking {
+public class Parking {
     int compteurVoiture = 0;
     private int nbPlaceMax;
     private String ville;

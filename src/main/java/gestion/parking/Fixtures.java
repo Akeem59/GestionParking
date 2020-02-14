@@ -1,11 +1,10 @@
-package gestionParking;
+package gestion.parking;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jdk.internal.jshell.tool.resources.version;
 
-class Fixtures extends Parking{
+public class Fixtures extends Parking{
 
     /**
      * créer des voitures
